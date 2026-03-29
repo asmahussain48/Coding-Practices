@@ -128,3 +128,221 @@ db.employees.insertMany([
   }
 ]);
 
+db.movies.insertMany([
+  {
+    title: "The Dark Horizon",
+    year: 2018,
+    rated: "PG-13",
+    runtime: 118,
+    countries: ["USA", "Canada"],
+    genres: ["Action", "Adventure", "Sci-Fi"],
+    cast: ["Tom Hanks", "Emma Stone"],
+    imdb: {
+      rating: 8.8,
+      votes: 25000
+    },
+    awards: {
+      wins: 3,
+      nominations: 7
+    },
+    num_mflix_comments: 12
+  },
+  {
+    title: "Silent River",
+    year: 2016,
+    rated: "R",
+    runtime: 110,
+    countries: ["UK"],
+    genres: ["Drama", "Thriller"],
+    cast: ["Tom Hanks", "Meg Ryan"],
+    imdb: {
+      rating: 8.7,
+      votes: 18000
+    },
+    awards: {
+      wins: 1,
+      nominations: 6
+    },
+    num_mflix_comments: 5
+  },
+  {
+    title: "Lost Kingdom",
+    year: 2005,
+    rated: "PG-13",
+    runtime: 140,
+    countries: ["India", "Germany"],
+    genres: ["Action", "Adventure", "Fantasy"],
+    cast: ["Chris Evans", "Scarlett Johansson"],
+    imdb: {
+      rating: 8.1,
+      votes: 5000
+    },
+    awards: {
+      wins: 2,
+      nominations: 8
+    },
+    num_mflix_comments: 8
+  },
+  {
+    title: "The Forgotten Mission",
+    year: 2008,
+    rated: "R",
+    runtime: 115,
+    countries: ["France"],
+    genres: ["Action", "Adventure", "War"],
+    cast: ["Matt Damon", "Anne Hathaway"],
+    imdb: {
+      rating: 7.9,
+      votes: 2200
+    },
+    awards: {
+      wins: 0,
+      nominations: 3
+    },
+    num_mflix_comments: 4
+  },
+  {
+    title: "Dreams of Tokyo",
+    year: 2012,
+    rated: "PG",
+    runtime: 105,
+    countries: ["Japan"],
+    genres: ["Romance", "Drama"],
+    cast: ["Tom Hanks", "Natalie Portman"],
+    imdb: {
+      rating: 8.0,
+      votes: 900
+    },
+    awards: {
+      wins: 1,
+      nominations: 2
+    },
+    num_mflix_comments: 9
+  },
+  {
+    title: "The Last Empire",
+    year: 1975,
+    rated: "PG",
+    runtime: 130,
+    countries: ["Italy", "Spain", "France", "Germany"],
+    genres: ["Adventure", "Drama"],
+    cast: ["Al Pacino", "Robert De Niro"],
+    imdb: {
+      rating: 8.4,
+      votes: 12000
+    },
+    awards: {
+      wins: 4,
+      nominations: 10
+    },
+    num_mflix_comments: 15
+  },
+  {
+    title: "Ocean Strike",
+    year: 2020,
+    rated: "R",
+    runtime: 95,
+    countries: ["Australia", "New Zealand", "UK", "Canada"],
+    genres: ["Action", "Adventure", "Thriller"],
+    cast: ["Chris Hemsworth", "Gal Gadot"],
+    imdb: {
+      rating: 8.9,
+      votes: 40000
+    },
+    awards: {
+      wins: 5,
+      nominations: 9
+    },
+    num_mflix_comments: 20
+  },
+  {
+    title: "The Quiet Forest",
+    year: 1999,
+    rated: "PG-13",
+    runtime: 102,
+    countries: ["Brazil"],
+    genres: ["Mystery", "Drama"],
+    cast: ["Julia Roberts", "Sandra Bullock"],
+    imdb: {
+      rating: 7.5,
+      votes: 1500
+    },
+    awards: {
+      wins: 0,
+      nominations: 1
+    },
+    num_mflix_comments: 6
+  },
+  {
+    title: "Broken Stars",
+    year: 2003,
+    rated: "R",
+    runtime: 123,
+    countries: ["South Korea"],
+    genres: ["Drama", "Sci-Fi"],
+    cast: ["Song Kang-ho", "Bae Doona"],
+    imdb: {
+      rating: 8.2,
+      votes: 3000
+    },
+    awards: {
+      wins: 2,
+      nominations: 6
+    },
+    num_mflix_comments: 2
+  },
+  {
+    title: "The Golden Path",
+    year: 1970,
+    rated: "G",
+    runtime: 90,
+    countries: ["USA"],
+    genres: ["Adventure", "Family"],
+    cast: ["Gregory Peck", "Julie Andrews"],
+    imdb: {
+      rating: 8.0,
+      votes: 7000
+    },
+    awards: {
+      wins: 1,
+      nominations: 4
+    },
+    num_mflix_comments: 3
+  },
+  {
+    title: "Shadow Lines",
+    year: 2019,
+    rated: "PG-13",
+    runtime: 150,
+    countries: ["Mexico", "Argentina", "Chile", "Peru", "Colombia"],
+    genres: ["Crime", "Thriller"],
+    cast: ["Ben Affleck", "Jessica Chastain"],
+    imdb: {
+      rating: 8.6,
+      votes: 16000
+    },
+    awards: {
+      wins: 2,
+      nominations: 7
+    },
+    num_mflix_comments: 11
+  },
+  {
+    title: "the final storm",
+    year: 2021,
+    rated: "R",
+    runtime: 100,
+    countries: ["Germany"],
+    genres: ["Action", "Adventure"],
+    cast: ["Tom Hanks", "Emily Blunt"],
+    imdb: {
+      rating: 9.0,
+      votes: 20000
+    },
+    awards: {
+      wins: 6,
+      nominations: 11
+    },
+    num_mflix_comments: 14
+  }
+])
