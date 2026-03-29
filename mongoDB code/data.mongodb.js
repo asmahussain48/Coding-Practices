@@ -1,64 +1,130 @@
-use('ecommerce');
-
-db.dropDatabase();
-
-db.products.insertMany([
+use("hr_db");
+db.employees.insertMany(
+  [
+    {
+      emp_id : 101,
+      name : "Asma",
+      dept : "IT",
+      salary : 850000,
+      skills : [
+        "Python", "MongoDB"
+      ]
+    },
+    {
+      emp_id : 102,
+      name : "Sara",
+      dept : "IT",
+      salary : 56000
+    },
   {
-    name: "Wireless Mouse",
-    price: 799,
-    category: "Electronics",
-    stock: 120,
-    ratings: 4.5,
-    tags: ["computer", "accessory", "wireless"],
-    createdAt: new Date()
+    emp_id: 103,
+    name: "Usman Ali",
+    dept: "Finance",
+    salary: 90000,
+    skills: ["Accounting", "Excel"],
+    joining_date: "2020-01-20"
   },
   {
-    name: "Mechanical Keyboard",
-    price: 2499,
-    category: "Electronics",
-    stock: 80,
-    ratings: 4.8,
-    tags: ["keyboard", "mechanical"],
-    createdAt: new Date()
+    emp_id: 104,
+    name: "Zara Malik",
+    dept: "HR",
+    salary: 78000,
+    skills: ["Java", "MongoDB"],
+    joining_date: "2023-05-01"
   },
   {
-    name: "Gaming Laptop",
-    price: 85999,
-    category: "Computers",
-    stock: 30,
-    ratings: 4.6,
-    tags: ["gaming", "laptop"],
-    createdAt: new Date()
+    emp_id: 105,
+    name: "Bilal Raza",
+    dept: "Marketing",
+    salary: 60000,
+    skills: ["SEO", "Content Writing"],
+    joining_date: "2021-11-15"
   }
-])
 
-db.contacts.insertMany([
-  { name: "Alice", message: "Loved your website!", phone: "9876543210", createdAt: new Date() },
-  { name: "Bob", message: "Do you have discounts on laptops?", phone: "9123456789", createdAt: new Date() },
-  { name: "Carol", message: "I want to cancel my order.", phone: "9988776655", createdAt: new Date() }
-])
+  ]
+)
 
+db.employees.insertOne({
+   emp_id: 106,
+   name: "Ali Khan",
+   department: "IT",
+   salary: 95000,
+   age: 29,
+   skills: ["Python", "MongoDB", "SQL"],
+   address: {
+      city: "Lahore",
+      country: "Pakistan"
+   },
+   joining_date: ISODate("2022-03-15"),
+   performance_score: 4.5
+});
 
-db.orders.insertMany([
+// Insert department document
+db.departments.insertOne({
+   dept_name: "IT",
+   budget: 5000000,
+   manager: "Ahmed Raza"
+});
+
+use("hr_db");
+
+db.employees.insertMany([
   {
-    orderId: "ORD001",
-    user: "John Doe",
-    products: [
-      { name: "Wireless Mouse", quantity: 1, price: 799 },
-      { name: "Mechanical Keyboard", quantity: 1, price: 2499 }
-    ],
-    total: 3298,
-    status: "Delivered",
-    createdAt: new Date()
+    emp_id: 201,
+    name: "Ali Khan",
+    dept: "IT",
+    salary: 85000,
+    performance_score: 92
   },
   {
-    orderId: "ORD002",
-    user: "Jane Smith",
-    products: [
-      { name: "Gaming Laptop", quantity: 1, price: 85999 }
-    ],
-    total: 85999,
-    status: "Pending",
-    createdAt: new Date()
+    emp_id: 202,
+    name: "Sara Ahmed",
+    dept: "HR",
+    salary: 65000
+    // no performance_score field
+  },
+  {
+    emp_id: 203,
+    name: "Usman Ali",
+    dept: "Finance",
+    salary: 90000,
+    performance_score: 78
+  },
+  {
+    emp_id: 204,
+    name: "Zara Malik",
+    dept: "IT",
+    salary: "78000"  // stored as STRING by mistake
+  },
+  {
+    emp_id: 205,
+    name: "Bilal Raza",
+    dept: "Marketing",
+    salary: 60000
+    // no performance_score field
   }
-])
+]);
+// Insert these for practice
+db.employees.insertMany([
+  {
+    emp_id: 106,
+    name: "Hamza Sheikh",
+    dept: "IT",
+    salary: 88000,
+    scores: [
+      { subject: "MongoDB", marks: 85 },
+      { subject: "Python", marks: 60 }
+    ]
+  },
+  {
+    emp_id: 107,
+    name: "Nadia Iqbal",
+    dept: "HR",
+    salary: 70000,
+    scores: [
+      { subject: "MongoDB", marks: 45 },
+      { subject: "Python", marks: 90 }
+    ]
+  }
+]);
+
