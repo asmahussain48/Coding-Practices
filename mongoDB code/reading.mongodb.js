@@ -145,7 +145,7 @@
 //     ]},
 //     {_id:0, title:1, year:1, imdb:1}
 // )
-use("hr_db");
+// use("hr_db");
 // db.movies.find(
 //     {$and: [
 //         {year: {$gte: 2000, $lte: 2010}},
@@ -201,10 +201,42 @@ use("hr_db");
 
 // 11. Increase the num_mflix_comments by 1 for a specific movie when a new 
 // comment is added.
-db.movies.find()
-
-
+// db.movies.updateOne(
+//     {title: "Dreams of Tokyo"},
+//     {$inc: {num_mflix_comments: 1}}
+// )
 
 
 // 12. Add a new genre "Classic" to movies released before 1980, only if it does not 
 // already exist in the genres array.
+use("hr_db");
+// db.movies.updateMany(
+//    {$and : [ {year: {$lt: 1980}}, {genres: {$nin: ["Classic"]}} ] } ,
+//     {$push : {genres: "Classic"}}
+// )
+
+
+// Step 1 - Insert a department and capture its ID
+// const result = db.departments.insertOne({
+//     dept_name: "Finance",
+//     budget: 3000000,
+//     manager: "Usman Tariq"
+// })
+// use("hr_db");
+// const result = db.departments.insertOne(
+//     {dept_name: "Finance", budget: 3000000, manager: "Usman Tariq"}
+// )
+
+// db.employees.insertOne(
+//     {emp_id:301,
+//     name : "Kamran",
+//     dept: result.insertedId}
+// )
+// // Step 2 - Insert employee referencing that department ID
+// db.employees.insertOne({
+//     emp_id: 301,
+//     name: "Kamran",
+//     dept_ref: result.insertedId,   // stores the ObjectId of Finance dept
+//     salary: 75000
+// })
+
